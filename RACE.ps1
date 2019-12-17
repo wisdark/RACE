@@ -1,4 +1,4 @@
-﻿<#
+<#
 
 File: RACE.ps1
 Author: Nikhil Mittal (@nikhil_mitt)
@@ -610,7 +610,10 @@ Use this switch to remove permissions added by the function.
 .EXAMPLE
 PS C:\> Set-RegistryImageFileExecution -SamAccountName labuser -ComputerName ops-mssql -Verbose 
 Use the above command to modify permissions of the 'Image File Execution Options' key on the target machine to allow 'labuser' 
-perrmissions to modify the key and its subkeys. 
+permissions to modify the key and its subkeys. 
+
+PS C:\> Invoke-RegistryAbuse -ComputerName ops-mssql -Method ImageFileExecution -Verbose 
+Above command sets payload for sethc and disables NLA.
 
 .LINK
 https://github.com/samratashok/RACE
@@ -4049,4 +4052,5 @@ http://moyix.blogspot.com/2008/02/decrypting-lsa-secrets.html
 ## END OF Directly from DAMP Toolkit ##
 
 ###########################################################################
+
 
